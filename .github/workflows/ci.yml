@@ -24,6 +24,11 @@ jobs:
         with:
           submodules: recursive
 
+      - name: Setup xmake
+        uses: xmake-io/github-action-setup-xmake@v1
+        with:
+          xmake-version: latest
+
       - name: Resolve vcpkg
         shell: pwsh
         run: |
@@ -50,6 +55,11 @@ jobs:
         uses: actions/checkout@v4
         with:
           submodules: recursive
+
+      - name: Setup xmake
+        uses: xmake-io/github-action-setup-xmake@v1
+        with:
+          xmake-version: latest
 
       - name: Resolve vcpkg
         shell: pwsh
